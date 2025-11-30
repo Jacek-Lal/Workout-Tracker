@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Mobilka2" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="Theme.Mobilka2" parent="Base.Theme.Mobilka2" />
+</resources>

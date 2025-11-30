@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="setBindingTag" type="id" />
+    <item name="exerciseBindingTag" type="id" />
+</resources>

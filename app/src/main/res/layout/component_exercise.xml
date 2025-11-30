@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="exercise"
+            type="com.example.inz.models.ExerciseRecord" />
+        <variable
+            name="viewModel"
+            type="com.example.inz.viewmodels.WorkoutViewModel" />
+        <variable
+            name="view"
+            type="com.example.inz.views.fragments.WorkoutFragment" />
+    </data>
+    <LinearLayout
+        android:id="@+id/exerciseComponent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_neutral_variant10"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/exerciseName"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:ellipsize="none"
+                android:gravity="center_vertical"
+                android:singleLine="false"
+                android:text="@{exercise.name}"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="20dp"
+                android:scaleX="2"
+                android:scaleY="2"
+                app:srcCompat="@android:drawable/arrow_down_float" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/exerciseDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Description"
+            android:inputType="text"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Set"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Kg"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Reps"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/setsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btnAddSet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Add Set"
+            android:onClick="@{}"/>
+    </LinearLayout>
+</layout>

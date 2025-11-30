@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="exercise"
+            type="com.example.inz.models.ExerciseRecord" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/exerciseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/exerciseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{exercise.name}"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/exerciseDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{exercise.description}"
+            android:visibility="@{exercise.description != null ? View.VISIBLE : View.GONE}"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/setsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+</layout>

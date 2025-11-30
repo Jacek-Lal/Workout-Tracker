@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rest_time_picker_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/material_dynamic_neutral10"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp"
+    android:paddingTop="24dp"
+    android:paddingRight="12dp">
+
+    <LinearLayout
+        android:id="@+id/minutes_picker_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/minutes_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minutes"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <NumberPicker
+            android:id="@+id/numberPickerMinutes"
+            android:theme="@style/AppTheme.Picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seconds_picker_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/seconds_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seconds"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <NumberPicker
+            android:id="@+id/numberPickerSeconds"
+            android:theme="@style/AppTheme.Picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

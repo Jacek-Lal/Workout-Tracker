@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.inz.viewmodels.StartWorkoutViewModel" />
+        <variable
+            name="handler"
+            type="com.example.inz.views.fragments.StartWorkoutFragment.Handler" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_dynamic_neutral10"
+        tools:context=".views.fragments.StartWorkoutFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/prebuiltWorkoutsContainer">
+
+                <Button
+                    android:id="@+id/startWorkoutBtn"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="64dp"
+                    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                    android:text="Start New Workout"
+                    android:onClick="@{() -> handler.showModal()}" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+</layout>

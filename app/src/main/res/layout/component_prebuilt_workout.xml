@@ -1,0 +1,65 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="workoutPlan"
+            type="com.example.inz.models.WorkoutPlan" />
+        <variable
+            name="handler"
+            type="com.example.inz.views.fragments.StartWorkoutFragment.Handler" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/workoutView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_neutral10"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/prebuiltWorkoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="@{workoutPlan.name}"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/btnContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:flexWrap="wrap"
+            app:justifyContent="center"
+            app:flexDirection="row"
+            app:workoutPlan="@{workoutPlan}"
+            app:currentWorkoutIndex="@{workoutPlan.currentWorkoutIndex}"
+            app:handler="@{handler}" />
+
+        <LinearLayout
+            android:id="@+id/exercisesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/material_dynamic_neutral_variant20"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:exercises="@{workoutPlan.currentExercises}" />
+
+        <Button
+            android:id="@+id/startWorkoutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Start Workout"
+            android:onClick="@{() -> handler.startPrebuiltWorkout(workoutPlan)}"/>
+    </LinearLayout>
+</layout>
