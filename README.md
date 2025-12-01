@@ -8,6 +8,17 @@ It was developed as my bachelor’s thesis project.
 
 ---
 
+## Screenshots
+<p align="center">
+  <img width="216" height="444" alt="Home tab with bar chart" src="https://github.com/user-attachments/assets/4f7fe323-569d-4992-9acc-ed4a08567d9e" />
+  <img width="216" height="444" alt="Workout tab with prebuilt workout" src="https://github.com/user-attachments/assets/e506c0a5-212f-48ad-81fe-5060623a24f6" /><br>
+  <img width="216" height="444" alt="Active workout view" src="https://github.com/user-attachments/assets/6aeea3c0-c351-4d87-9c35-87ef5cb4b19d" />
+  <img width="216" height="444" alt="Exercise selection list" src="https://github.com/user-attachments/assets/a2dc5991-aead-4faa-8655-4d2581803550" />
+  <img width="216" height="444" alt="Workout history tab" src="https://github.com/user-attachments/assets/13e9d145-3d8c-49a3-afb9-ebea15a5390f" />
+</p>
+
+---
+
 ## Tech Stack
 
 [![Kotlin][Kotlin.com]][Kotlin-url]
